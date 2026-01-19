@@ -8,4 +8,3 @@ def multiple_returns(sentence):
         length = 0
         first_ch = None
         return length, first_ch
-
