@@ -13,11 +13,15 @@ def roman_to_int(roman_string):
             "D" : 500,
             "M" : 1000
             }
-    first_letter = roman_string[0]
-    number = roman_set[first_letter]
-    for i in range(1, len(roman_string)):
-        for key in roman_set:
-            if roman_string[i] == key:
-                if roman_set[key] >= number:
-                    number = number + roman_set[key]
-    return number
+    total = 0
+    for i in range(len(roman_string)):
+        curr = roman_set[roman_string[i]]
+        if i + 1 < len(roman_string):
+            next_value = roman_set[roman_string[i + 1]
+            if curr < next_value:
+                total = total - curr
+            else:
+                total = total + curr
+        else:
+            total = total + curr
+    return total
