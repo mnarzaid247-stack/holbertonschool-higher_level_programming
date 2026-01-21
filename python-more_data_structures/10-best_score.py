@@ -2,6 +2,8 @@
 def best_score(a_dictionary):
     the_best = 0
     the_key = ""
+    if not a_dictionary:
+        return None
     for key, value in a_dictionary.items():
         if value > the_best:
             the_best = a_dictionary[key]
