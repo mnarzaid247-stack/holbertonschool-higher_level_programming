@@ -8,7 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
             number = number + 1
         except IndexError:
             break
-        except Exception:
+        except (TypeError, ValueError):
             pass
         i = i + 1
     print()
