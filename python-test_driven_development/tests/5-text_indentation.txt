@@ -3,9 +3,9 @@
 >>> text_indentation("Hello. How are you? I'm fine:")
 Hello.
 
- How are you?
+How are you?
 
- I'm fine:
+I'm fine:
 
 >>> text_indentation("No punctuation here")
 No punctuation here
