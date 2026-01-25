@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""creating a class."""
+"""Creating a class"""
 
 
 class Square:
-    """creating a class named Square."""
-    
+    """Creating a class named Square."""
+
     def __init__(self, size=0, position=(0, 0)):
         """creating size and position."""
         self.size = size
@@ -38,7 +38,8 @@ class Square:
     def position(self, value):
         """creating a setter for position."""
         if (not isinstance(value, tuple) or len(value) != 2 or
-                not isinstance(value[0], int) or not isinstance(value[1], int) or
+                not isinstance(value[0], int) or
+                not isinstance(value[1], int) or
                 value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
