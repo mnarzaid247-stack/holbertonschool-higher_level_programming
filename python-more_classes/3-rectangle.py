@@ -59,4 +59,3 @@ class Rectangle:
             row = [row] * self.height
             new_str = "\n".join(row)
             return new_str
-
