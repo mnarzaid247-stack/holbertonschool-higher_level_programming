@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""creating a module with functions"""
 
 
 def is_same_class(obj, a_class):
