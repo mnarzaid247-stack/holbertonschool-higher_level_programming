@@ -59,7 +59,7 @@ class Rectangle:
             new_str = ""
             return new_str
         else:
-            row = self.print_symbol * self.width
+            row = str(self.print_symbol) * self.width
             row = [row] * self.height
             new_str = "\n".join(row)
             return new_str
