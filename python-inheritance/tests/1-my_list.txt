@@ -35,5 +35,5 @@
 >>> print(empty)
 []
 
->>> empty.print_sorted
-[] 
+>>> empty.print_sorted()
+[]
