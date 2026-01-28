@@ -62,3 +62,9 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
+
+
+>>> bg.integer_validatot("age", (3, 4))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
