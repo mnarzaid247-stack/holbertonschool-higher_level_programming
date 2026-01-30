@@ -4,7 +4,6 @@ Duck typing with abstract base classes: Shape, Circle, Rectangle
 """
 
 from abc import ABC, abstractmethod
-import math
 
 
 class Shape(ABC):
@@ -30,11 +29,11 @@ class Circle(Shape):
 
     def area(self):
         """Return the area of the circle."""
-        return math.pi * (self.radius ** 2)
+        return 3.141592653589793 * (self.radius ** 2)
 
     def perimeter(self):
         """Return the perimeter of the circle."""
-        return 2 * math.pi * self.radius
+        return 2 * 3.141592653589793 * self.radius
 
 
 class Rectangle(Shape):
