@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Duck typing with abstract base classes: Shape, Circle, Rectangle
 """
@@ -13,12 +13,12 @@ class Shape(ABC):
     @abstractmethod
     def area(self):
         """Return the area of the shape."""
-        raise NotImplementedError
+        pass
 
     @abstractmethod
     def perimeter(self):
         """Return the perimeter of the shape."""
-        raise NotImplementedError
+        pass
 
 
 class Circle(Shape):
