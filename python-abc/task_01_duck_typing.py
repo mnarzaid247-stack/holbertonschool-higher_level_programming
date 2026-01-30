@@ -29,7 +29,7 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-         """Return the area of the shape."""
+        """Return the area of the shape."""
         return math.pi * (self.radius ** 2)
 
     def perimeter(self):
@@ -50,7 +50,7 @@ class Rectangle(Shape):
         return self.width * self.height
 
     def perimeter(self):
-         """Return the perimeter of the shape."""
+        """Return the perimeter of the shape."""
         return 2 * (self.width + self.height)
 
 
