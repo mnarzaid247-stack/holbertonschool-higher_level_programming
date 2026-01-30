@@ -51,5 +51,11 @@ def shape_info(shape):
     """
     Print the area and perimeter of a shape-like object.
     """
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    area = getattr(shape, "area")
+    perimeter = getattr(shape, "perimeter")
+
+    area = area() if callable(area) else area
+    perimeter = perimeter() if callable(perimeter) else perimeter
+
+    print(f"Area: {area}")
+    print(f"Perimeter: {perimeter}")
