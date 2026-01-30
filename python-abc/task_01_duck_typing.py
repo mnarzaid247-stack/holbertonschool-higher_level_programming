@@ -21,7 +21,7 @@ class Shape(ABC):
         pass
 
 
-class Circle(Shape):
+class Circle:
     """Circle shape."""
 
     def __init__(self, radius):
@@ -37,7 +37,7 @@ class Circle(Shape):
         return 2 * math.pi * self.radius
 
 
-class Rectangle(Shape):
+class Rectangle:
     """Rectangle shape."""
 
     def __init__(self, width, height):
