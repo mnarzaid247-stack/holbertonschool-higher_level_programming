@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Duck typing with abstract base classes: Shape, Circle, Rectangle."""
+"""
+Duck typing with abstract base classes: Shape, Circle, Rectangle
+"""
 
 from abc import ABC, abstractmethod
 import math
@@ -53,6 +55,8 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Print the area and perimeter of a shape-like object (duck typing)."""
+    """
+    Print the area and perimeter of a shape-like object.
+    """
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
