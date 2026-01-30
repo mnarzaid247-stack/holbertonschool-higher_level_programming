@@ -40,12 +40,15 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
+        """creating a area"""
         return self.width * self.height
 
     def perimeter(self):
+        """creating a gitter"""
         return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
+    """creating a mithod"""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
