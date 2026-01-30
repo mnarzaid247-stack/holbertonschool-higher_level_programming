@@ -58,7 +58,7 @@ def shape_info(shape):
     """
     Print the area and perimeter of a shape-like object.
     """
-     try:
+    try:
         area = shape.area()
         perimeter = shape.perimeter()
     except AttributeError:
