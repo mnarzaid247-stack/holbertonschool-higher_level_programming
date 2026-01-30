@@ -62,4 +62,3 @@ def shape_info(shape):
     perimeter = shape.perimeter()
     print(f"Area: {area}")
     print(f"Perimeter: {perimeter}")
-    return area, perimeter
