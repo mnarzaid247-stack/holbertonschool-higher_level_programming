@@ -5,7 +5,7 @@ import math
 
 
 class Shape(ABC):
-"""creating a class"""
+    """creating a class"""
 
     @abstractmethod
     def area(self):
@@ -19,9 +19,9 @@ class Shape(ABC):
 
 
 class Circle(Shape):
-"""creating a class"""
+    """creating a class"""
 
-def __init__(self, radius):
+    def __init__(self, radius):
         """creating a method"""
         self.radius = radius
 
@@ -35,7 +35,7 @@ def __init__(self, radius):
 
 
 class Rectangle(Shape):
-"""creating a class"""
+    """creating a class"""
 
     def __init__(self, width, height):
         """creating a mithod"""
