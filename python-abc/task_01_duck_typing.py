@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from abc import ABC, abstractmethod
 import math
-"""importing library"""
 
 
 class Shape(ABC):
