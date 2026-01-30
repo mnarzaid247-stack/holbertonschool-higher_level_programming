@@ -62,6 +62,7 @@ def shape_info(shape):
         area = shape.area()
         perimeter = shape.perimeter()
     except AttributeError:
-        pass
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
+        return
+    else:
+        print(f"Area: {area}")
+        print(f"Perimeter: {perimeter}")
