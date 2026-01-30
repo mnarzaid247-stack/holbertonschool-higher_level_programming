@@ -4,6 +4,7 @@ Duck typing with abstract base classes: Shape, Circle, Rectangle
 """
 
 from abc import ABC, abstractmethod
+import math
 
 
 class Shape(ABC):
@@ -24,19 +25,31 @@ class Circle(Shape):
     """Circle shape."""
 
     def __init__(self, radius):
+        if type(radius) not in (int, float):
+            raise TypeError("radius must be a number")
+        if radius <= 0:
+            raise ValueError("radius must be greater than 0")
         self.radius = radius
 
     def area(self):
-        return 3.141592653589793 * (self.radius ** 2)
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        return 2 * 3.141592653589793 * self.radius
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
     """Rectangle shape."""
 
     def __init__(self, width, height):
+        if type(width) not in (int, float):
+            raise TypeError("width must be a number")
+        if type(height) not in (int, float):
+            raise TypeError("height must be a number")
+        if width <= 0:
+            raise ValueError("width must be greater than 0")
+        if height <= 0:
+            raise ValueError("height must be greater than 0")
         self.width = width
         self.height = height
 
@@ -51,11 +64,5 @@ def shape_info(shape):
     """
     Print the area and perimeter of a shape-like object.
     """
-    area = getattr(shape, "area")
-    perimeter = getattr(shape, "perimeter")
-
-    area = area() if callable(area) else area
-    perimeter = perimeter() if callable(perimeter) else perimeter
-
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
