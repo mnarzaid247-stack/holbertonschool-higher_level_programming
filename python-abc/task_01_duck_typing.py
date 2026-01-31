@@ -55,7 +55,7 @@ def shape_info(shape):
     try:
         area = shape.area()
         perimeter = shape.perimeter()
-        print(f"Area: {area}")
-        print(f"Perimeter: {perimeter}")
+        print(f"Area:{area}")
+        print(f"Perimeter:{perimeter}")
     except Exception:
         pass
