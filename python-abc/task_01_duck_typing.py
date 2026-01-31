@@ -21,7 +21,6 @@ class Circle(Shape):
     """Circle shape."""
 
     def __init__(self, radius):
-        """creating a method"""
         self.radius = radius
 
     def area(self):
@@ -37,7 +36,6 @@ class Rectangle(Shape):
     """Rectangle shape."""
 
     def __init__(self, width, height):
-        """creating a method"""
         self.width = width
         self.height = height
 
