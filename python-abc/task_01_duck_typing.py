@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-"""Duck typing with abstract base classes: Shape, Circle, Rectangle."""
-
 from abc import ABC, abstractmethod
 import math
 
