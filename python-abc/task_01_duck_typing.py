@@ -1,28 +1,26 @@
 #!/usr/bin/python3
-"""Duck typing with abstract base classes: Shape, Circle, Rectangle."""
+"""Duck typing with abstract base classes: Shape, Circle, Rectangle"""
 
 from abc import ABC, abstractmethod
 import math
 
-doc = __doc__
-
 
 class Shape(ABC):
     """Abstract base class for shapes."""
-    doc = __doc__
 
     @abstractmethod
     def area(self):
+        """Return the area of the shape."""
         pass
 
     @abstractmethod
     def perimeter(self):
+        """Return the perimeter of the shape."""
         pass
 
 
 class Circle(Shape):
     """Circle shape."""
-    doc = __doc__
 
     def __init__(self, radius):
         self.radius = radius
@@ -38,7 +36,6 @@ class Circle(Shape):
 
 class Rectangle(Shape):
     """Rectangle shape."""
-    doc = __doc__
 
     def __init__(self, width, height):
         self.width = width
@@ -57,6 +54,3 @@ def shape_info(shape):
     """Print the area and perimeter of a shape-like object (duck typing)."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
-
-
-shape_info.doc = shape_info.__doc__
