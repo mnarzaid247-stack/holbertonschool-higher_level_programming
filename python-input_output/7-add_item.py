@@ -11,5 +11,5 @@ try:
     items = load_from_json_file(filename)
 except Exception:
     items = []
-items = items + sys_argv[1:]
+items = items + sys.argv[1:]
 save_to_json_file(items, filename)
