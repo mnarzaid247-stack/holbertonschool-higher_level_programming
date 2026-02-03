@@ -14,7 +14,7 @@ class Student:
         """creating a method"""
         if isinstance(attrs, list):
             new = {}
-            for attr in attrs:
+            if attr in attrs:
                 new[attr] = self.__dict__[attr]
             return new
         return self.__dict__
