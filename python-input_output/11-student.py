@@ -18,7 +18,7 @@ class Student:
                 if attr in self.__dict__:
                     new[attr] = self.__dict__[attr]
             return new
-        return self.__dict_
+        return self.__dict__
 
     def reload_from_json(self, json):
         """creating a method"""
