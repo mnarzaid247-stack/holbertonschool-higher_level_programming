@@ -23,4 +23,4 @@ class Student:
     def reload_from_json(self, json):
         """creating a method"""
         for key, value in json.items():
-            satter(self, key, value)_
+            setattr(self, key, value)
