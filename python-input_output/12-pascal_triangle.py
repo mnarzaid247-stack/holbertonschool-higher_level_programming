@@ -4,7 +4,7 @@
 
 def pascal_triangle(n):
     """creating a defntion"""
-    new_list =[]
+    new_list = []
     if n <= 0:
         return new_list
     tri = [[1]]
