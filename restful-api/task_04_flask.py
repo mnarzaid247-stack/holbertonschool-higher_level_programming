@@ -11,7 +11,7 @@ def home():
 
 @app.route("/data")
 def get_data():
-    return jsonfi(list(users.keys()))
+    return jsonfiy(list(users.keys()))
 
 @app.route("/status")
 def status():
@@ -24,7 +24,7 @@ def get_user(username):
     return jsonify({"error": "User not found"}), 404
 
 @app.route("/add_user", methods=["POST"])
-def add_user:
+def add_user():
     if not request.is_json:
         return jsonify({"error":"Invalid JSON"}), 400
     data = request.get_json()
