@@ -35,25 +35,6 @@ def verify_password(username, password):
 def basic_auth_error():
     return jsonify({"error": "Unauthorized"}), 401
 
-@jwt.unautherized_loader
-def jwt_missing_token(err_msg):
-    return jsonify({"error": "Missing or invalid token"}), 401
-@jwt.invalid_token_loader
-def jwt_invalid_token(err_msg):
-    return jsonify({"error": "Invalid token"}), 401
-
-@jwt.expired_token_loader
-def jwt_expired_token(jwt_header, jwt_payload):
-    return jsonify({"error": "Token has expired"}), 401
-
-@jwt.revoked_token_loader
-def jwt_revoked_token(jwt_header,jwt_payload):
-    return jsonify({"error": "Token has been revoked"}), 401
-
-@jwt.needs_fresh_token_loader
-def jwt_fresh_required(jwt_header, jwt_payload):
-    return jsonify({"error": "Fresh token required"}), 401
-
 @app.route("/basic-protected", methods=["GET"])
 @auth.login_required
 def basic_protected():
@@ -78,7 +59,7 @@ def login():
             )
     return jsonify({"access_token": token})
 
-@app.route("/jwt-protected", method=["GET"])
+@app.route("/jwt-protected", methods=["GET"])
 @jwt_required()
 def jwt_protected():
     return "JWT Auth: Access Granted"
