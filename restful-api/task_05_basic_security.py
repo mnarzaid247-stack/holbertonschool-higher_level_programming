@@ -27,20 +27,20 @@ users = {
         }
 @auth.verify_password
 def verify_password(username, password):
-    if username in useres and check_password_hash(users[username]["password"], password):
+    if username in users and check_password_hash(users[username]["password"], password):
         return username
     return None
 
 @auth.error_handler
 def basic_auth_error():
-    return jsonify({"error": "Unathorized"}), 401
+    return jsonify({"error": "Unauthorized"}), 401
 
 @jwt.unautherized_loader
 def jwt_missing_token(err_msg):
     return jsonify({"error": "Missing or invalid token"}), 401
 @jwt.invalid_token_loader
 def jwt_invalid_token(err_msg):
-    return jsoify({"error": "Invalid token"}), 401
+    return jsonify({"error": "Invalid token"}), 401
 
 @jwt.expired_token_loader
 def jwt_expired_token(jwt_header, jwt_payload):
@@ -76,9 +76,9 @@ def login():
             identity=username,
             additional_claims={"role": users[username]["role"]}
             )
-    return jsoify({"access_token": token})
+    return jsonify({"access_token": token})
 
-@app.route("/jwt-protected", method=["get"])
+@app.route("/jwt-protected", method=["GET"])
 @jwt_required()
 def jwt_protected():
     return "JWT Auth: Access Granted"
