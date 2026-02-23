@@ -1,2 +1,2 @@
---print a table
+-- print a table
 SHOW CREATE TABLE first_table;
