@@ -1,2 +1,2 @@
 --print a table
-SELECT CREATE TABLE first_table;
+SHOW CREATE TABLE first_table;
