@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def main():
     """connecting to mysql"""
     username = sys.argv[1]
@@ -16,11 +17,10 @@ def main():
             user=username,
             passwd=password,
             db=database
-            )
+        )
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
     rows = cur.fetchall()
-
     for row in rows:
         print(row)
     cur.close()
