@@ -19,10 +19,7 @@ def main():
         db=database
     )
     cur = db.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC;"
-        .format(state)
-    )
+    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC;".format(state))  # noqa: E501
     for row in cur.fetchall():
         print(row)
     cur.close()
