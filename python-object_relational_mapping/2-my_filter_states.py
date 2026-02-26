@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""lists specific state"""
+"""Lists states matching the given name."""
 
 import sys
 import MySQLdb
 
 
 def main():
-    """creating the main function"""
+    """Connects to MySQL and prints matching states."""
     if len(sys.argv) != 5:
         return
     username = sys.argv[1]
