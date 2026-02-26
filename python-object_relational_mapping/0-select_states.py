@@ -21,7 +21,6 @@ def main():
     )
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC;")
-    
     for row in cur.fetchall():
         print(row)
     cur.close()
