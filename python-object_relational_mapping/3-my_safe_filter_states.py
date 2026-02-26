@@ -6,6 +6,7 @@ import MySQLdb
 
 
 def main():
+    """the main function"""
     if len(sys.argv) != 4:
         return
     username = sys.argv[1]
