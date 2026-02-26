@@ -21,7 +21,7 @@ def main():
             db=database
             )
     cur = db.cursor()
-    cur.execute("SELECT state_id FROM cities "
+    cur.execute("SELECT state_name FROM cities "
             "INNER JOIN states ON states.id = cities.state_id "
             "GROUP BY states.id ORDER BY cities.id")
     for row in cur.fetchall():
