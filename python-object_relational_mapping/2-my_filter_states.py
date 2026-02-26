@@ -7,8 +7,6 @@ import MySQLdb
 
 def main():
     """Connects to MySQL and prints matching states."""
-    if len(sys.argv) != 5:
-        return
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
