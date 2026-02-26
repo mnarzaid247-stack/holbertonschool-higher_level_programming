@@ -10,7 +10,7 @@ def main():
         return
     username = sys.argv[1]
     password = sys.argv[2]
-    database =sys.argv[3]
+    database = sys.argv[3]
     state = sys.argv[4]
 
     db = MySQLdb.connect(
@@ -22,10 +22,10 @@ def main():
             )
     cur = db.cursor()
     cur.execute("SELECT cities.name FROM cities "
-            "INNER JOIN states ON states.id = cities.state_id "
-            "WHERE states.name = %s ORDER BY cities.id ASC",
-            (state, )
-               )
+        "INNER JOIN states ON states.id = cities.state_id "
+        "WHERE states.name = %s ORDER BY cities.id ASC",
+        (state, )
+    )
     cities = [row[0] for row in cur.fetchall()]
     print(", ".join(cities))
     cur.close()
