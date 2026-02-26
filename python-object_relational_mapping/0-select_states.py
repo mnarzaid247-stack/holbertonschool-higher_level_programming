@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-"""lists all states"""
+"""This script lists all states from the database."""
+
 import MySQLdb
 import sys
 """import library"""
 
 
 def main():
-    """connecting to mysql"""
+    """Connect to MySQL and print all states ordered by id."""
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-
     db = MySQLdb.connect(
             host="localhost",
             port=3306,
             user=username,
-            passwd=password,
+            password=password,
             db=database
         )
     cur = db.cursor()
