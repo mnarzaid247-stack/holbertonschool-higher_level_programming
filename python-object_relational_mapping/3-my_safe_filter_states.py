@@ -9,6 +9,7 @@ def main():
     """the main function"""
     if len(sys.argv) != 5:
         return
+        
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
@@ -22,8 +23,8 @@ def main():
         )
     cur = db.cursor()
     cur.execute(
-            "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC;"
-            .format(state)
+            "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC;",
+            (state,)
             )
     for row in cur.fetchall():
         print(row)
