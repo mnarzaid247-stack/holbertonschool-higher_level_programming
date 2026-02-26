@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""lists with condithons"""
+"""Lists all states with names starting with N."""
 
 import MySQLdb
 import sys
 
 
 def main():
-    """the main function"""
+    """Connects to MySQL and prints states starting with upper N."""
     if len(sys.argv) != 4:
         return
     username = sys.argv[1]
