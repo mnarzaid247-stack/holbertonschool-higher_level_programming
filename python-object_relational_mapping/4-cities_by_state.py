@@ -19,9 +19,9 @@ def main():
             db=database
             )
     cur = db.cursor()
-    cur.execute("
-    SELECT * FROM cities INNIR JOIN states"
-    "ON states.id = cities.state_id ORDER BY id ASC;")
+    cur.execute(
+        "SELECT states.id, cities.name, states.name FROM cities INNIR JOIN states"
+        "ON states.id = cities.state_id ORDER BY cities.id ASC;")
     for row in cur.fetchall():
         print(row)
     cur.close()
