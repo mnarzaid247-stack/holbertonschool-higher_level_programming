@@ -23,7 +23,9 @@ def main():
     cur = db.cursor()
     cur.execute("SELECT state_name FROM cities "
             "INNER JOIN states ON states.id = cities.state_id "
-            "GROUP BY states.id ORDER BY cities.id")
+            "WHERE states.name = %s ORDER BY cities.id ASC",
+            (state, )
+               )
     for row in cur.fetchall():
         print(row, end=",")
     cur.close()
