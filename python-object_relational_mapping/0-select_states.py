@@ -8,6 +8,8 @@ import sys
 
 def main():
     """Connect to MySQL and print all states ordered by id."""
+    if len(sys.argv) != 4:
+        return
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
