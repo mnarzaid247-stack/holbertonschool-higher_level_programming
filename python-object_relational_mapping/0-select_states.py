@@ -3,7 +3,6 @@
 
 import MySQLdb
 import sys
-"""import library"""
 
 
 def main():
@@ -17,7 +16,7 @@ def main():
             host="localhost",
             port=3306,
             user=username,
-            password=password,
+            passwd=password,
             db=database
         )
     cur = db.cursor()
