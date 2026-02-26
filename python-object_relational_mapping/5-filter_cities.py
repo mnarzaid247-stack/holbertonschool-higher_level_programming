@@ -21,7 +21,7 @@ def main():
             db=database
             )
     cur = db.cursor()
-    cur.execute("SELECT cities_name FROM cities "
+    cur.execute("SELECT cities.name FROM cities "
             "INNER JOIN states ON states.id = cities.state_id "
             "WHERE states.name = %s ORDER BY cities.id ASC",
             (state, )
