@@ -7,10 +7,10 @@ import MySQLdb
 
 def main():
     """the main function"""
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         return
     username = sys.argv[1]
-    paswword = sys.argv[2]
+    password = sys.argv[2]
     database = sys.argv[3]
     state = sys.argv[4]
     db = MySQLdb.connect(
