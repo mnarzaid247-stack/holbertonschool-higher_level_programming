@@ -25,7 +25,6 @@ def main():
     cur.execute(
         "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC;".format(state)
     )
-    
     print(cur.fetchall())
     cur.close()
     db.close()
