@@ -20,7 +20,8 @@ def main():
             )
     cur = db.cursor()
     cur.execute(
-        "SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states "
+        "SELECT cities.id, cities.name, states.name "
+        "FROM cities INNER JOIN states "
         "ON states.id = cities.state_id ORDER BY cities.id ASC;")
     for row in cur.fetchall():
         print(row)
