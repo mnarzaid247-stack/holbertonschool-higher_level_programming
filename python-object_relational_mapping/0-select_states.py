@@ -20,9 +20,9 @@ def main():
         db=database
     )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
-    rows = cur.fetchall()
-    for row in rows:
+    cur.execute("SELECT * FROM states ORDER BY id ASC;")
+    
+    for row in cur.fetchall():
         print(row)
     cur.close()
     db.close()
