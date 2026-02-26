@@ -22,8 +22,7 @@ def main():
         db=database
     )
     cur = db.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC;".format(state))
+    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC;".format(state))
     for row in cur.fetchall():
         print(row)
     cur.close()
