@@ -18,8 +18,10 @@ def main():
             pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter(State.name == name)
+    state = (
+        session.query(State).filter(State.name == name)
         .order_by(State.id).first()
+    )
     if state is None:
         print("Not found")
     else:
