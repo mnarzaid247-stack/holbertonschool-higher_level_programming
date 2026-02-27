@@ -8,6 +8,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 def main():
+    """the main function"""
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
