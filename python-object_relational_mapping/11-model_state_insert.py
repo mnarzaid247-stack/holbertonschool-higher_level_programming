@@ -14,10 +14,10 @@ def main():
     engine = create_engine(
       "mysql+mysqldb://{}:{}@localhost/{}"
       .format(username, password, database),
-       pool_pre_ping=True)
+      pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    new_state = State(name = "Louisiana")
+    new_state = State(name="Louisiana")
     session.add(new_state)
     session.commit()
     print(new_state.id)
@@ -25,4 +25,4 @@ def main():
 
 
 if __name__ == "__main__":
-  main()
+    main()
