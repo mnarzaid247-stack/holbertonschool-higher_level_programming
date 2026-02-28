@@ -19,7 +19,7 @@ def main():
             pool_pre_ping=True
             )
     Session = sessionmaker(bind=engine)
-    session =Session()
+    session = Session()
     for city, state in (
             session.query(City, State).join(State).order_by(City.id)
             .all()
