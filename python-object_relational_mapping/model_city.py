@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""creating a model"""
 
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
 
 class City(Base):
+    """creating a class"""
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
