@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""lists cities"""
 
 import sys
 from model_city import City
@@ -8,6 +9,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 def main():
+    """the main def"""
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
